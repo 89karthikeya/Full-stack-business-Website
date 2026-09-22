@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Systems for Service Businesses</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            darkBg: '#1D1D1F',
+                            cardBg: '#2C2C2E',
+                            darkBorder: '#38383A',
+                            accent: '#0071E3',
+                            accentHover: '#0077ED',
+                            gray: '#86868B',
+                            lightBg: '#F5F5F7',
+                            border: '#D2D2D7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #1D1D1F;
+            overflow-x: hidden;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-apple-darkBg antialiased selection:bg-apple-accent selection:text-white min-h-screen w-full">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-apple-border/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
+            <!-- Left Spacer for layout symmetry -->
+            <div class="w-8 md:w-0"></div>
+
+            <!-- Centered Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-7 lg:space-x-8 text-[15px] font-medium text-apple-darkBg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+                <a href="#why-ai" class="whitespace-nowrap hover:text-apple-accent transition-colors">Why Speed & AI</a>
+                <a href="#challenge" class="whitespace-nowrap hover:text-apple-accent transition-colors">The Challenge</a>
+                <a href="#solution" class="whitespace-nowrap hover:text-apple-accent transition-colors">How It Works</a>
+                <a href="#demo" class="whitespace-nowrap hover:text-apple-accent transition-colors">Demo</a>
+                <a href="#industries" class="whitespace-nowrap hover:text-apple-accent transition-colors">Industries</a>
+                <a href="#dashboard" class="whitespace-nowrap hover:text-apple-accent transition-colors">Dashboard</a>
+                <a href="#faq" class="whitespace-nowrap hover:text-apple-accent transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Right CTA & Mobile Toggle -->
+            <div class="flex items-center space-x-4 ml-auto">
+                <a id="nav-cta-btn" href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full bg-apple-accent hover:bg-apple-accentHover text-white text-sm font-medium transition-all duration-300 shadow-sm opacity-0 pointer-events-none transform translate-y-1 whitespace-nowrap">
+                    Book Consultation
+                </a>
+                <button id="menu-btn" class="md:hidden text-apple-darkBg p-2 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-apple-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#why-ai" class="block text-sm font-medium text-apple-darkBg py-2">Why Speed & AI</a>
+            <a href="#challenge" class="block text-sm font-medium text-apple-darkBg py-2">The Challenge</a>
+            <a href="#solution" class="block text-sm font-medium text-apple-darkBg py-2">How It Works</a>
+            <a href="#demo" class="block text-sm font-medium text-apple-darkBg py-2">Demo</a>
+            <a href="#industries" class="block text-sm font-medium text-apple-darkBg py-2">Industries</a>
+            <a href="#dashboard" class="block text-sm font-medium text-apple-darkBg py-2">Dashboard</a>
+            <a href="#faq" class="block text-sm font-medium text-apple-darkBg py-2">FAQ</a>
+            <a href="#contact" class="block text-center w-full py-3 rounded-full bg-apple-accent text-white text-sm font-medium">Book Consultation</a>
+        </div>
+    </header>
+
+    <main class="w-full">
+        <section id="hero" class="min-h-screen bg-white flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden w-full">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-apple-lightBg border border-apple-border text-xs font-semibold text-apple-darkBg mb-4">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Next-Gen Operations Architecture</span>
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-apple-darkBg leading-[1.08] mb-4">
+                    AI Automation Systems for <span class="text-apple-accent">Service Businesses</span>
+                </h1>
+                
+                <p class="text-base sm:text-lg text-apple-gray max-w-2xl mx-auto mb-6 leading-relaxed">
+                    We help businesses respond to customers, recover missed calls and book more appointments with AI.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="#contact" class="w-full sm:w-auto px-7 py-3 rounded-full bg-apple-accent hover:bg-apple-accentHover text-white font-medium text-sm transition-all shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2">
+                        <span>Book a Free Consultation</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="#demo" class="w-full sm:w-auto px-7 py-3 rounded-full bg-apple-lightBg hover:bg-apple-border/50 text-apple-darkBg font-medium text-sm transition-all border border-apple-border flex items-center justify-center gap-2">
+                        <span>View Interactive Demo</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-ai" class="py-24 bg-apple-lightBg border-t border-apple-border/40 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">Market Intelligence</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Why Speed & AI Matter</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Verified benchmarks from global research institutions on modern service customer expectations.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Stat Card 1 -->
+                    <div class="p-8 rounded-3xl bg-white border border-apple-border flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="stat-number text-4xl sm:text-5xl font-bold text-apple-accent mb-3 tracking-tight" data-target="76">0%</div>
+                            <h3 class="text-base font-semibold text-apple-darkBg mb-2">Gen AI Business Adoption</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Enterprises and growing service firms integrating generative AI into core workflows.</p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-apple-border/60 flex items-center justify-between text-xs text-apple-gray">
+                            <span>Goldman Sachs · 2026</span>
+                            <a href="https://www.goldmansachs.com" target="_blank" rel="noopener noreferrer" class="text-apple-accent hover:underline flex items-center gap-1">
+                                <span>Source</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 2 -->
+                    <div class="p-8 rounded-3xl bg-white border border-apple-border flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="stat-number text-4xl sm:text-5xl font-bold text-apple-accent mb-3 tracking-tight" data-target="93">0%</div>
+                            <h3 class="text-base font-semibold text-apple-darkBg mb-2">Productivity Gain</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Documented operational efficiency lift achieved through workflow automation agents.</p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-apple-border/60 flex items-center justify-between text-xs text-apple-gray">
+                            <span>Goldman Sachs · 2026</span>
+                            <a href="https://www.goldmansachs.com" target="_blank" rel="noopener noreferrer" class="text-apple-accent hover:underline flex items-center gap-1">
+                                <span>Source</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 3 -->
+                    <div class="p-8 rounded-3xl bg-white border border-apple-border flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="stat-number text-4xl sm:text-5xl font-bold text-apple-accent mb-3 tracking-tight" data-target="84">0%</div>
+                            <h3 class="text-base font-semibold text-apple-darkBg mb-2">Customer Expectation</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Consumers expect immediate responses to service enquiries regardless of business hours.</p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-apple-border/60 flex items-center justify-between text-xs text-apple-gray">
+                            <span>Goldman Sachs · 2026</span>
+                            <a href="https://www.goldmansachs.com" target="_blank" rel="noopener noreferrer" class="text-apple-accent hover:underline flex items-center gap-1">
+                                <span>Source</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 4 -->
+                    <div class="p-8 rounded-3xl bg-white border border-apple-border flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="stat-number text-4xl sm:text-5xl font-bold text-apple-accent mb-3 tracking-tight" data-target="90">0%</div>
+                            <h3 class="text-base font-semibold text-apple-darkBg mb-2">SMB Growth Impact</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Small and medium businesses accelerating customer acquisition with AI automation tools.</p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-apple-border/60 flex items-center justify-between text-xs text-apple-gray">
+                            <span>Salesforce SMB Report · 2025</span>
+                            <a href="https://www.salesforce.com/en-us/wp-content/uploads/sites/4/documents/resources/smb-trends-report-6th-edition_Salesforce.pdf" target="_blank" rel="noopener noreferrer" class="text-apple-accent hover:underline flex items-center gap-1">
+                                <span>Source</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 5 -->
+                    <div class="p-8 rounded-3xl bg-white border border-apple-border flex flex-col justify-between shadow-sm md:col-span-2 lg:col-span-1">
+                        <div>
+                            <div class="stat-number text-4xl sm:text-5xl font-bold text-apple-accent mb-3 tracking-tight" data-target="73">0%</div>
+                            <h3 class="text-base font-semibold text-apple-darkBg mb-2">Operational Efficiency</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Chamber surveyed businesses reporting streamlined administrative tasks through AI.</p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-apple-border/60 flex items-center justify-between text-xs text-apple-gray">
+                            <span>U.S. Chamber of Commerce · 2025</span>
+                            <a href="https://www.uschamber.com/technology/artificial-intelligence/small-businesses-are-harnessing-ai-to-innovate-and-compete" target="_blank" rel="noopener noreferrer" class="text-apple-accent hover:underline flex items-center gap-1">
+                                <span>Source</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenge" class="py-24 bg-apple-darkBg text-white border-t border-apple-darkBorder w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-accent block mb-3">THE CHALLENGE</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Where Do Service Businesses Lose Customers?</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Service businesses can lose customers when they don't respond quickly.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Challenge Card 1 -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-apple-cardBg border border-apple-darkBorder flex flex-col justify-between transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-sm mb-3 font-mono">01</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Missed Calls</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed mb-6">Your team may be busy and unable to answer every call.</p>
+                        </div>
+                        <div class="pt-4 border-t border-apple-darkBorder/60 text-xs">
+                            <span class="text-apple-gray/70 font-semibold uppercase tracking-wider block mb-1 text-[10px]">Impact:</span>
+                            <span class="text-apple-gray font-medium">Customers may call another business.</span>
+                        </div>
+                    </div>
+
+                    <!-- Challenge Card 2 -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-apple-cardBg border border-apple-darkBorder flex flex-col justify-between transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-sm mb-3 font-mono">02</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Slow Replies</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed mb-6">Customers may not get a quick response to their enquiry.</p>
+                        </div>
+                        <div class="pt-4 border-t border-apple-darkBorder/60 text-xs">
+                            <span class="text-apple-gray/70 font-semibold uppercase tracking-wider block mb-1 text-[10px]">Impact:</span>
+                            <span class="text-apple-gray font-medium">They may lose interest or choose another business.</span>
+                        </div>
+                    </div>
+
+                    <!-- Challenge Card 3 -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-apple-cardBg border border-apple-darkBorder flex flex-col justify-between transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-sm mb-3 font-mono">03</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Forgotten Follow-Ups</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed mb-6">Quotes and estimates may not get followed up.</p>
+                        </div>
+                        <div class="pt-4 border-t border-apple-darkBorder/60 text-xs">
+                            <span class="text-apple-gray/70 font-semibold uppercase tracking-wider block mb-1 text-[10px]">Impact:</span>
+                            <span class="text-apple-gray font-medium">Interested customers can be lost.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="py-24 bg-white border-t border-apple-border/40 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">THE SOLUTION</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">From Customer Enquiry to Booked Job</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">AI responds to customers, qualifies enquiries, books appointments, and follows up automatically.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Step 01 -->
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm hover:border-apple-accent/40 transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-xl mb-3 font-mono">01</div>
+                            <h3 class="font-semibold text-lg text-apple-darkBg mb-2">Customer Contacts</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Customer calls or sends a message.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm hover:border-apple-accent/40 transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-xl mb-3 font-mono">03</div>
+                            <h3 class="font-semibold text-lg text-apple-darkBg mb-2">AI Responds</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">AI replies instantly, 24/7.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm hover:border-apple-accent/40 transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-xl mb-3 font-mono">03</div>
+                            <h3 class="font-semibold text-lg text-apple-darkBg mb-2">AI Qualifies</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">AI asks questions and collects the details.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm hover:border-apple-accent/40 transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-xl mb-3 font-mono">04</div>
+                            <h3 class="font-semibold text-lg text-apple-darkBg mb-2">AI Books</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">AI checks availability and books the job.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 05 -->
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm hover:border-apple-accent/40 transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-xl mb-3 font-mono">05</div>
+                            <h3 class="font-semibold text-lg text-apple-darkBg mb-2">Team Gets Notified</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">The business receives the booking details.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 06 -->
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm hover:border-apple-accent/40 transition-all">
+                        <div>
+                            <div class="text-apple-accent font-bold text-xl mb-3 font-mono">06</div>
+                            <h3 class="font-semibold text-lg text-apple-darkBg mb-2">AI Follows Up</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">AI follows up if the customer doesn't book.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="py-24 bg-apple-lightBg border-t border-apple-border/40 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">Live Demonstration</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Experience the Automation Flow</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Test how an inbound customer enquiry is handled and turned into a booked appointment.</p>
+                </div>
+
+                <!-- Demo Card -->
+                <div class="bg-white rounded-3xl border border-apple-border p-6 sm:p-10 shadow-lg w-full">
+                    <div class="flex flex-col lg:flex-row gap-8 items-start">
+                        <!-- Control Panel -->
+                        <div class="w-full lg:w-5/12 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Test a Customer Request</h3>
+                                <p class="text-apple-gray text-sm">Choose a situation to see how the AI responds.</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <button onclick="triggerDemo('missed_call')" id="btn-missed_call" class="w-full text-left p-3.5 rounded-2xl bg-apple-lightBg border border-apple-border text-sm font-medium hover:border-apple-accent transition-all flex items-center justify-between cursor-pointer">
+                                    <span class="flex items-center gap-2">📞 Missed Call</span>
+                                </button>
+                                <button onclick="triggerDemo('customer_message')" id="btn-customer_message" class="w-full text-left p-3.5 rounded-2xl bg-apple-lightBg border border-apple-border text-sm font-medium hover:border-apple-accent transition-all flex items-center justify-between cursor-pointer">
+                                    <span class="flex items-center gap-2">💬 Customer Message</span>
+                                </button>
+                                <button onclick="triggerDemo('quote_request')" id="btn-quote_request" class="w-full text-left p-3.5 rounded-2xl bg-apple-lightBg border border-apple-border text-sm font-medium hover:border-apple-accent transition-all flex items-center justify-between cursor-pointer">
+                                    <span class="flex items-center gap-2">📋 Quote Request</span>
+                                </button>
+                                <button onclick="triggerDemo('appointment_request')" id="btn-appointment_request" class="w-full text-left p-3.5 rounded-2xl bg-apple-lightBg border border-apple-border text-sm font-medium hover:border-apple-accent transition-all flex items-center justify-between cursor-pointer">
+                                    <span class="flex items-center gap-2">📅 Appointment Request</span>
+                                </button>
+                                <button onclick="triggerDemo('after_hours')" id="btn-after_hours" class="w-full text-left p-3.5 rounded-2xl bg-apple-lightBg border border-apple-border text-sm font-medium hover:border-apple-accent transition-all flex items-center justify-between cursor-pointer">
+                                    <span class="flex items-center gap-2">🌙 After-Hours Request</span>
+                                </button>
+                                <button onclick="triggerDemo('emergency_request')" id="btn-emergency_request" class="w-full text-left p-3.5 rounded-2xl bg-apple-lightBg border border-apple-border text-sm font-medium hover:border-apple-accent transition-all flex items-center justify-between cursor-pointer">
+                                    <span class="flex items-center gap-2">🚨 Emergency Request</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Live Chat Interactive Simulation -->
+                        <div class="w-full lg:w-7/12 bg-apple-darkBg text-white p-6 sm:p-8 rounded-2xl border border-apple-darkBorder flex flex-col justify-between min-h-[480px]">
+                            <div>
+                                <!-- Header -->
+                                <div class="flex items-center justify-between pb-4 border-b border-apple-darkBorder mb-6">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        <span class="text-xs font-mono uppercase tracking-wider text-apple-gray">Conversation Simulation</span>
+                                    </div>
+                                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-apple-cardBg border border-apple-darkBorder text-emerald-400">DEMO SIMULATION</span>
+                                </div>
+
+                                <!-- Chat Messages Window -->
+                                <div id="demo-chat-container" class="space-y-3 min-h-[280px] max-h-[340px] overflow-y-auto pr-1 flex flex-col justify-center items-center">
+                                    <p id="demo-placeholder-text" class="text-apple-gray text-sm text-center py-12 italic">
+                                        Choose a scenario above to start the demo.
+                                    </p>
+                                </div>
+
+                                <!-- Typing Indicator -->
+                                <div id="typing-indicator" class="hidden mt-3 text-xs font-mono text-apple-gray flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-apple-accent animate-ping"></span>
+                                    <span>AI Assistant is typing</span>
+                                    <span class="inline-flex gap-0.5">
+                                        <span class="animate-bounce font-bold">.</span>
+                                        <span class="animate-bounce font-bold" style="animation-delay: 0.2s">.</span>
+                                        <span class="animate-bounce font-bold" style="animation-delay: 0.4s">.</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Result Banner -->
+                            <div id="demo-success-banner" class="hidden mt-4 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-5 h-5 rounded-full bg-emerald-500 text-apple-darkBg flex items-center justify-center font-bold text-xs">✓</span>
+                                    <span id="demo-banner-text" class="font-medium">APPOINTMENT BOOKED · Today at 2:00 PM</span>
+                                </div>
+                                <span class="text-[10px] text-emerald-400/80">Synced</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="industries" class="py-24 bg-white border-t border-apple-border/40 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">Industries Served</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Built for Field & Service Businesses</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Designed specifically for local and regional businesses where response speed directly drives booked jobs.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">🏠</div>
+                        <h3 class="font-semibold text-lg mb-1">HVAC & Plumbing</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">Emergency dispatch & instant quote follow-up.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">⚡</div>
+                        <h3 class="font-semibold text-lg mb-1">Electrical Services</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">Missed call recovery & booking confirmation.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">🏗️</div>
+                        <h3 class="font-semibold text-lg mb-1">General Contractors</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">Lead qualification & consultation scheduling.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">🛡️</div>
+                        <h3 class="font-semibold text-lg mb-1">Restoration & Cleanup</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">24/7 intake & emergency triage routing.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">🧹</div>
+                        <h3 class="font-semibold text-lg mb-1">Commercial Cleaning</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">Recurring booking & estimate follow-ups.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">🌳</div>
+                        <h3 class="font-semibold text-lg mb-1">Landscaping & Tree</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">Seasonal estimate intake & scheduling.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">🚗</div>
+                        <h3 class="font-semibold text-lg mb-1">Mobile Auto Services</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">Instant dispatch & availability checks.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-apple-lightBg border border-apple-border text-center shadow-sm">
+                        <div class="text-3xl mb-3">🔧</div>
+                        <h3 class="font-semibold text-lg mb-1">Specialty Trades</h3>
+                        <p class="text-xs text-apple-gray leading-relaxed">Customized communication pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="py-24 bg-apple-lightBg border-t border-apple-border/40 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">Control Center</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Complete Visibility & Control</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Monitor every enquiry, missed call recovery, and booked appointment in real time.</p>
+                </div>
+
+                <!-- Premium SaaS Dashboard Container -->
+                <div class="w-full rounded-3xl bg-apple-darkBg border border-apple-darkBorder p-6 sm:p-10 shadow-2xl text-white overflow-hidden">
+                    <!-- Dashboard Header -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 border-b border-apple-darkBorder gap-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-apple-accent">System Overview</span>
+                            <h3 class="text-xl font-bold mt-1">Live Operations Dashboard</h3>
+                        </div>
+                        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-apple-cardBg border border-apple-darkBorder text-xs text-apple-gray font-mono">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-white font-medium">DEMO DATA</span>
+                        </div>
+                    </div>
+
+                    <!-- KPI Cards Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                        <!-- KPI Card 1 -->
+                        <div class="p-6 rounded-2xl bg-apple-cardBg border border-apple-darkBorder flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[11px] font-mono text-apple-gray uppercase tracking-wider">Recovered Missed Calls</span>
+                                <div class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">142</div>
+                                <div class="flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
+                                    <span>↑ +28%</span>
+                                    <span class="text-apple-gray font-normal">vs average this month</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KPI Card 2 -->
+                        <div class="p-6 rounded-2xl bg-apple-cardBg border border-apple-darkBorder flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[11px] font-mono text-apple-gray uppercase tracking-wider">Avg. Response Time</span>
+                                <div class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">18 sec</div>
+                                <div class="text-xs text-apple-gray font-medium">Automated response</div>
+                            </div>
+                        </div>
+
+                        <!-- KPI Card 3 -->
+                        <div class="p-6 rounded-2xl bg-apple-cardBg border border-apple-darkBorder flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[11px] font-mono text-apple-gray uppercase tracking-wider">Appointments Booked</span>
+                                <div class="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">89</div>
+                                <div class="text-xs text-apple-gray font-medium">Synced to calendar</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity Feed -->
+                    <div class="p-6 rounded-2xl bg-apple-cardBg/60 border border-apple-darkBorder mb-8">
+                        <div class="flex items-center justify-between pb-4 border-b border-apple-darkBorder/60 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-mono font-bold uppercase tracking-wider text-apple-gray">Recent Activity</span>
+                            </div>
+                            <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-white/5 border border-apple-darkBorder text-apple-gray">DEMO ACTIVITY</span>
+                        </div>
+
+                        <div class="space-y-3 text-xs">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-apple-darkBg/50 border border-apple-darkBorder/40">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                    <span class="text-white font-medium">Missed call recovered</span>
+                                </div>
+                                <span class="text-apple-gray font-mono text-[11px]">2 min ago</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-apple-darkBg/50 border border-apple-darkBorder/40">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                                    <span class="text-white font-medium">New service enquiry received</span>
+                                </div>
+                                <span class="text-apple-gray font-mono text-[11px]">8 min ago</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-apple-darkBg/50 border border-apple-darkBorder/40">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                                    <span class="text-white font-medium">Appointment booked</span>
+                                </div>
+                                <span class="text-apple-gray font-mono text-[11px]">14 min ago</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-apple-darkBg/50 border border-apple-darkBorder/40">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                                    <span class="text-white font-medium">Follow-up message sent</span>
+                                </div>
+                                <span class="text-apple-gray font-mono text-[11px]">21 min ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Status Row -->
+                    <div class="p-4 rounded-2xl bg-apple-cardBg/40 border border-apple-darkBorder/60 mb-6 flex flex-wrap items-center justify-between gap-4 text-xs text-apple-gray">
+                        <span class="font-mono text-[11px] uppercase tracking-wider text-white/80">System Status</span>
+                        <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                <span class="text-white text-xs font-medium">Automation Active</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                <span class="text-white text-xs font-medium">Calendar Connected</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                <span class="text-white text-xs font-medium">Notifications Active</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Message -->
+                    <div class="pt-4 border-t border-apple-darkBorder/60 text-xs text-apple-gray flex items-center justify-center sm:justify-start gap-2">
+                        <span>🔒</span>
+                        <span>Secure cloud infrastructure · Your customer data is protected with secure access controls.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white border-t border-apple-border/40 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">Trust & Reliability</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Enterprise-Grade Security</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Your data and customer interactions are protected with rigorous security protocols.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-apple-accent/10 text-apple-accent flex items-center justify-center mb-6 font-bold">🔐</div>
+                            <h3 class="text-xl font-semibold mb-3">Encrypted Data Transport</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">All inbound and outbound communications are encrypted in transit and at rest using modern standards.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-apple-accent/10 text-apple-accent flex items-center justify-center mb-6 font-bold">🛡️</div>
+                            <h3 class="text-xl font-semibold mb-3">Strict Access Controls</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Role-based permission architecture ensures your team only accesses what they need for dispatch.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-apple-lightBg border border-apple-border flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-apple-accent/10 text-apple-accent flex items-center justify-center mb-6 font-bold">⚡</div>
+                            <h3 class="text-xl font-semibold mb-3">Reliable Infrastructure</h3>
+                            <p class="text-apple-gray text-sm leading-relaxed">Hosted on high-availability cloud servers with automated redundancy and uptime monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-apple-lightBg border-t border-apple-border/40 w-full">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">Common Questions</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Frequently Asked Questions</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Everything you need to know about our AI automation systems.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl border border-apple-border overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left font-semibold text-base sm:text-lg flex items-center justify-between cursor-pointer">
+                            <span>How does missed-call recovery work?</span>
+                            <svg class="w-5 h-5 text-apple-gray transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-apple-gray text-sm leading-relaxed">
+                            When an incoming call is unanswered or drops, our system instantly detects the event and dispatches a personalized SMS within seconds to keep the customer engaged.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl border border-apple-border overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left font-semibold text-base sm:text-lg flex items-center justify-between cursor-pointer">
+                            <span>Will this replace our office staff?</span>
+                            <svg class="w-5 h-5 text-apple-gray transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-apple-gray text-sm leading-relaxed">
+                            No. The system acts as an automated assistant that handles repetitive after-hours enquiries and missed calls, freeing up your team to focus on high-value dispatch and customer care.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl border border-apple-border overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left font-semibold text-base sm:text-lg flex items-center justify-between cursor-pointer">
+                            <span>How long does setup take?</span>
+                            <svg class="w-5 h-5 text-apple-gray transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-apple-gray text-sm leading-relaxed">
+                            Most systems are audited, built, tested, and launched within 7 to 10 days depending on custom calendar and CRM integrations.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-white rounded-2xl border border-apple-border overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left font-semibold text-base sm:text-lg flex items-center justify-between cursor-pointer">
+                            <span>Can it integrate with our existing calendar?</span>
+                            <svg class="w-5 h-5 text-apple-gray transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-apple-gray text-sm leading-relaxed">
+                            Yes. We integrate directly with major field service software, Google Calendar, Outlook, and popular CRM platforms.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-apple-darkBg text-white border-t border-apple-darkBorder w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-apple-gray block mb-3">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Let's See What We Can Automate.</h2>
+                    <p class="text-apple-gray text-base sm:text-lg">Tell us about your business and where customer enquiries are getting stuck.</p>
+                </div>
+
+                <!-- Form Card Container -->
+                <div class="max-w-3xl mx-auto bg-apple-cardBg border border-apple-darkBorder rounded-3xl p-6 sm:p-12 shadow-2xl w-full">
+                    <form id="consultation-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-xs font-medium text-apple-gray mb-2">Name *</label>
+                                <input type="text" id="name" required placeholder="John Doe" class="w-full h-12 px-4 rounded-xl bg-apple-darkBg border border-apple-darkBorder text-white text-sm placeholder-apple-gray/50 focus:outline-none focus:border-apple-accent transition-colors">
+                            </div>
+                            <div>
+                                <label for="businessName" class="block text-xs font-medium text-apple-gray mb-2">Business Name *</label>
+                                <input type="text" id="businessName" required placeholder="Apex Restoration" class="w-full h-12 px-4 rounded-xl bg-apple-darkBg border border-apple-darkBorder text-white text-sm placeholder-apple-gray/50 focus:outline-none focus:border-apple-accent transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-xs font-medium text-apple-gray mb-2">Email *</label>
+                                <input type="email" id="email" required placeholder="john@example.com" class="w-full h-12 px-4 rounded-xl bg-apple-darkBg border border-apple-darkBorder text-white text-sm placeholder-apple-gray/50 focus:outline-none focus:border-apple-accent transition-colors">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-medium text-apple-gray mb-2">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 000-0000" class="w-full h-12 px-4 rounded-xl bg-apple-darkBg border border-apple-darkBorder text-white text-sm placeholder-apple-gray/50 focus:outline-none focus:border-apple-accent transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="automationGoal" class="block text-xs font-medium text-apple-gray mb-2">What would you like to automate? *</label>
+                            <select id="automationGoal" required class="w-full h-12 px-4 rounded-xl bg-apple-darkBg border border-apple-darkBorder text-white text-sm focus:outline-none focus:border-apple-accent transition-colors">
+                                <option value="" disabled selected>Select a main goal...</option>
+                                <option value="Missed-call follow-up">Missed-call follow-up</option>
+                                <option value="AI customer enquiries">AI customer enquiries</option>
+                                <option value="Lead qualification">Lead qualification</option>
+                                <option value="Appointment booking">Appointment booking</option>
+                                <option value="Custom automation">Custom automation</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="currentProcess" class="block text-xs font-medium text-apple-gray mb-2">Current Process</label>
+                            <textarea id="currentProcess" rows="3" placeholder="Briefly describe how you currently handle customer enquiries..." class="w-full p-4 rounded-xl bg-apple-darkBg border border-apple-darkBorder text-white text-sm placeholder-apple-gray/50 focus:outline-none focus:border-apple-accent transition-colors resize-none"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" id="submit-btn" class="w-full h-14 rounded-full bg-apple-accent hover:bg-apple-accentHover text-white font-medium text-sm transition-all shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 cursor-pointer">
+                                <span>Book a Free Consultation →</span>
+                            </button>
+                        </div>
+
+                        <!-- Status message container -->
+                        <div id="form-message" class="hidden text-center text-sm py-3 px-4 rounded-xl"></div>
+
+                        <p class="text-center text-xs text-apple-gray pt-2">
+                            No obligation. Let's discuss what could be automated.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-apple-darkBg text-apple-gray text-xs border-t border-apple-darkBorder text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 AI Automation Systems. All rights reserved.</p>
+            <div class="flex items-center space-x-6">
+                <a href="#why-ai" class="hover:text-white transition-colors">Market Intelligence</a>
+                <a href="#solution" class="hover:text-white transition-colors">How It Works</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Behavior (Show/Hide CTA button when scrolled past Hero)
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroSection = document.getElementById('hero');
+            const navCtaBtn = document.getElementById('nav-cta-btn');
+
+            if (heroSection && navCtaBtn) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Hero is visible: Hide CTA button in navbar
+                            navCtaBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-1');
+                            navCtaBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                        } else {
+                            // Scrolled away from Hero: Show CTA button in navbar
+                            navCtaBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-1');
+                            navCtaBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                observer.observe(heroSection);
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Market Intelligence counter animation triggered by IntersectionObserver
+        document.addEventListener('DOMContentLoaded', () => {
+            const statElements = document.querySelectorAll('.stat-number');
+            const section = document.getElementById('why-ai');
+
+            if (!section || statElements.length === 0) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target); // Trigger only once
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            observer.observe(section);
+
+            function animateStats() {
+                const duration = 1500; // 1.5 seconds
+                const startTime = performance.now();
+
+                function updateCounters(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // Ease-out cubic curve
+                    const easeProgress = 1 - Math.pow(1 - progress, 3);
+
+                    statElements.forEach(el => {
+                        const target = parseInt(el.getAttribute('data-target'), 10);
+                        const current = Math.floor(target * easeProgress);
+                        el.textContent = current + '%';
+                    });
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounters);
+                    } else {
+                        statElements.forEach(el => {
+                            const target = el.getAttribute('data-target');
+                            el.textContent = target + '%';
+                        });
+                    }
+                }
+
+                requestAnimationFrame(updateCounters);
+            }
+        });
+
+        let activeScenario = null;
+        let demoTimerouts = [];
+
+        const scenarios = {
+            missed_call: {
+                banner: "APPOINTMENT BOOKED · Today at 2:00 PM",
+                script: [
+                    { sender: 'AI ASSISTANT', text: "Hi! We missed your call. How can we help?" },
+                    { sender: 'CUSTOMER', text: "Hi, my AC stopped cooling. Can someone help?" },
+                    { sender: 'AI ASSISTANT', text: "Yes, we can help. What's your address?" },
+                    { sender: 'CUSTOMER', text: "124 Main Street." },
+                    { sender: 'AI ASSISTANT', text: "Thanks. Is the AC running but not cooling?" },
+                    { sender: 'CUSTOMER', text: "Yes, it's running but not cooling." },
+                    { sender: 'AI ASSISTANT', text: "Got it. We can send a technician today. We have 2:00 PM or 4:30 PM available." },
+                    { sender: 'CUSTOMER', text: "2:00 PM works." },
+                    { sender: 'AI ASSISTANT', text: "Perfect. Your appointment is booked for 2:00 PM today." }
+                ]
+            },
+            customer_message: {
+                banner: "ESTIMATE SCHEDULED · Tomorrow at 10:00 AM",
+                script: [
+                    { sender: 'AI ASSISTANT', text: "Hi! Thanks for messaging us. How can we help you today?" },
+                    { sender: 'CUSTOMER', text: "Do you offer free estimates for plumbing repairs?" },
+                    { sender: 'AI ASSISTANT', text: "Yes, we offer free on-site estimates! Where are you located?" },
+                    { sender: 'CUSTOMER', text: "742 Evergreen Terrace." },
+                    { sender: 'AI ASSISTANT', text: "Great. We have an estimator in your area tomorrow morning at 10:00 AM." },
+                    { sender: 'CUSTOMER', text: "10:00 AM is perfect." },
+                    { sender: 'AI ASSISTANT', text: "Awesome! Your free estimate is scheduled for tomorrow at 10:00 AM." }
+                ]
+            },
+            quote_request: {
+                banner: "QUOTE CONSULTATION BOOKED · Friday at 1:00 PM",
+                script: [
+                    { sender: 'AI ASSISTANT', text: "Hi! We received your quote request. What service do you need?" },
+                    { sender: 'CUSTOMER', text: "I need a quote to replace my electrical panel." },
+                    { sender: 'AI ASSISTANT', text: "Got it! How many amps is your current panel?" },
+                    { sender: 'CUSTOMER', text: "It's 100 amps, looking to upgrade to 200 amps." },
+                    { sender: 'AI ASSISTANT', text: "Thanks. I can schedule a specialist to inspect and provide an exact quote. How is Friday at 1:00 PM?" },
+                    { sender: 'CUSTOMER', text: "Friday at 1:00 PM works great." },
+                    { sender: 'AI ASSISTANT', text: "All set! Specialist scheduled for Friday at 1:00 PM." }
+                ]
+            },
+            appointment_request: {
+                banner: "APPOINTMENT BOOKED · Thursday at 9:00 AM",
+                script: [
+                    { sender: 'AI ASSISTANT', text: "Hi! We received your booking request. What day works best for you?" },
+                    { sender: 'CUSTOMER', text: "I'd like to book a routine furnace tune-up this Thursday." },
+                    { sender: 'AI ASSISTANT', text: "We have openings this Thursday at 9:00 AM or 3:00 PM. Which do you prefer?" },
+                    { sender: 'CUSTOMER', text: "9:00 AM please." },
+                    { sender: 'AI ASSISTANT', text: "Done! Your furnace tune-up is booked for Thursday at 9:00 AM." }
+                ]
+            },
+            after_hours: {
+                banner: "SERVICE BOOKED · Tomorrow at 8:00 AM",
+                script: [
+                    { sender: 'AI ASSISTANT', text: "Hi! Our office is closed, but I can still help." },
+                    { sender: 'CUSTOMER', text: "My heater is making a loud noise." },
+                    { sender: 'AI ASSISTANT', text: "Sorry about that! We can have a technician check it first thing in the morning at 8:00 AM." },
+                    { sender: 'CUSTOMER', text: "That would be great, thanks." },
+                    { sender: 'AI ASSISTANT', text: "You're all set! A technician will arrive tomorrow at 8:00 AM." }
+                ]
+            },
+            emergency_request: {
+                banner: "EMERGENCY REQUEST RECEIVED · Team notified",
+                script: [
+                    { sender: 'AI ASSISTANT', text: "Hi! Our office is closed, but I can still help." },
+                    { sender: 'CUSTOMER', text: "Water is leaking from my ceiling." },
+                    { sender: 'AI ASSISTANT', text: "I'm sorry. Is the water still leaking?" },
+                    { sender: 'CUSTOMER', text: "Yes." },
+                    { sender: 'AI ASSISTANT', text: "Okay. Please stay away from the water and any electrical items." },
+                    { sender: 'CUSTOMER', text: "Okay." },
+                    { sender: 'AI ASSISTANT', text: "Thanks. I've sent your emergency request to the team." }
+                ]
+            }
+        };
+
+        function clearDemoTimeouts() {
+            demoTimerouts.forEach(t => clearTimeout(t));
+            demoTimerouts = [];
+        }
+
+        function triggerDemo(type) {
+            activeScenario = type;
+            clearDemoTimeouts();
+
+            const scenarioKeys = ['missed_call', 'customer_message', 'quote_request', 'appointment_request', 'after_hours', 'emergency_request'];
+
+            scenarioKeys.forEach(key => {
+                const btn = document.getElementById('btn-' + key);
+                if (!btn) return;
+                if (key === type) {
+                    btn.className = 'w-full text-left p-3.5 rounded-2xl bg-white border-2 border-apple-accent text-sm font-medium transition-all flex items-center justify-between cursor-pointer shadow-sm';
+                } else {
+                    btn.className = 'w-full text-left p-3.5 rounded-2xl bg-apple-lightBg border border-apple-border text-sm font-medium hover:border-apple-accent transition-all flex items-center justify-between cursor-pointer';
+                }
+            });
+
+            runSimulation();
+        }
+
+        function runSimulation() {
+            if (!activeScenario || !scenarios[activeScenario]) return;
+
+            const chatContainer = document.getElementById('demo-chat-container');
+            const typingIndicator = document.getElementById('typing-indicator');
+            const successBanner = document.getElementById('demo-success-banner');
+            const bannerText = document.getElementById('demo-banner-text');
+
+            chatContainer.className = 'space-y-3 min-h-[280px] max-h-[340px] overflow-y-auto pr-1';
+            chatContainer.innerHTML = '';
+            successBanner.classList.add('hidden');
+            typingIndicator.classList.add('hidden');
+
+            const currentScript = scenarios[activeScenario].script;
+            let currentDelay = 300;
+
+            currentScript.forEach((msg) => {
+                const isAI = msg.sender === 'AI ASSISTANT';
+
+                // Show typing indicator before AI messages
+                if (isAI) {
+                    const typingTimeout = setTimeout(() => {
+                        typingIndicator.classList.remove('hidden');
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
+                    }, currentDelay);
+                    demoTimerouts.push(typingTimeout);
+                    currentDelay += 2000; // 2 seconds typing duration
+                }
+
+                // Render Message
+                const msgTimeout = setTimeout(() => {
+                    typingIndicator.classList.add('hidden');
+
+                    const msgEl = document.createElement('div');
+                    msgEl.className = isAI 
+                        ? 'flex flex-col items-start space-y-1' 
+                        : 'flex flex-col items-end space-y-1';
+
+                    const senderLabel = isAI
+                        ? '<span class="text-[10px] font-mono text-apple-accent font-bold uppercase tracking-wider">AI ASSISTANT</span>'
+                        : '<span class="text-[10px] font-mono text-apple-gray font-bold uppercase tracking-wider">CUSTOMER</span>';
+
+                    const bubbleStyle = isAI
+                        ? 'bg-apple-cardBg border border-apple-darkBorder text-white rounded-2xl rounded-tl-none p-3 max-w-[85%] text-xs leading-relaxed shadow-sm'
+                        : 'bg-apple-accent text-white rounded-2xl rounded-tr-none p-3 max-w-[85%] text-xs leading-relaxed shadow-sm';
+
+                    msgEl.innerHTML = `
+                        ${senderLabel}
+                        <div class="${bubbleStyle}">${msg.text}</div>
+                    `;
+
+                    chatContainer.appendChild(msgEl);
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }, currentDelay);
+
+                demoTimerouts.push(msgTimeout);
+                currentDelay += 2500; // 2.5 seconds pause after message before next turn
+            });
+
+            // Show Success Banner after conversation finishes
+            const finalTimeout = setTimeout(() => {
+                bannerText.textContent = scenarios[activeScenario].banner;
+                successBanner.classList.remove('hidden');
+            }, currentDelay + 200);
+
+            demoTimerouts.push(finalTimeout);
+        }
+
+        // Firebase Integration for Consultation Form
+        let isSubmitting = false;
+
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            if (isSubmitting) return;
+
+            const name = document.getElementById('name').value.trim();
+            const businessName = document.getElementById('businessName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
+            const automationGoal = document.getElementById('automationGoal').value;
+            const currentProcess = document.getElementById('currentProcess') ? document.getElementById('currentProcess').value.trim() : '';
+            const submitBtn = document.getElementById('submit-btn');
+            const messageEl = document.getElementById('form-message');
+
+            if (!name || !businessName || !email || !automationGoal) {
+                messageEl.textContent = 'Please fill in all required fields.';
+                messageEl.className = 'text-center text-sm py-3 px-4 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20';
+                messageEl.classList.remove('hidden');
+                return;
+            }
+
+            isSubmitting = true;
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Submitting...</span>';
+            messageEl.classList.add('hidden');
+
+            try {
+                if (typeof window.__submitConsultationToFirebase === 'function') {
+                    await window.__submitConsultationToFirebase({
+                        name,
+                        businessName,
+                        email,
+                        phone,
+                        automationGoal,
+                        currentProcess
+                    });
+                } else {
+                    const { submitConsultation } = await import('/src/firebase.ts');
+                    await submitConsultation({
+                        name,
+                        businessName,
+                        email,
+                        phone,
+                        automationGoal,
+                        currentProcess
+                    });
+                }
+
+                messageEl.textContent = "Thanks! Your request has been submitted. We'll be in touch soon.";
+                messageEl.className = 'text-center text-sm py-3 px-4 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
+                messageEl.classList.remove('hidden');
+
+                document.getElementById('consultation-form').reset();
+            } catch (error) {
+                console.error("Firebase submission error:", error);
+                messageEl.textContent = 'Error saving request: ' + (error.message || 'Please check connection.');
+                messageEl.className = 'text-center text-sm py-3 px-4 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20';
+                messageEl.classList.remove('hidden');
+            } finally {
+                isSubmitting = false;
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        }
+    </script>
+    <script type="module">
+        import { submitConsultation } from '/src/firebase.ts';
+        window.__submitConsultationToFirebase = submitConsultation;
+    </script>
+</body>
+</html>

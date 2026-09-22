@@ -1,0 +1,28 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Consultations collection submitted from landing page
+    match /consultations/{consultationId} {
+      // Anyone can submit a consultation booking request with valid fields
+      allow create: if request.resource.data.name is string
+                    && request.resource.data.name.size() > 0
+                    && request.resource.data.name.size() <= 100
+                    && request.resource.data.businessName is string
+                    && request.resource.data.businessName.size() > 0
+                    && request.resource.data.businessName.size() <= 150
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() > 0
+                    && request.resource.data.email.size() <= 150
+                    && request.resource.data.automationGoal is string
+                    && request.resource.data.automationGoal.size() > 0
+                    && request.resource.data.automationGoal.size() <= 100
+                    && (!('phone' in request.resource.data) || (request.resource.data.phone is string && request.resource.data.phone.size() <= 50))
+                    && (!('currentProcess' in request.resource.data) || (request.resource.data.currentProcess is string && request.resource.data.currentProcess.size() <= 2000))
+                    && request.resource.data.status == 'pending';
+
+      // Read, update, and delete access is reserved for admin/dashboard
+      allow read, update, delete: if false;
+    }
+  }
+}

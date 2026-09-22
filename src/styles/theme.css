@@ -1,0 +1,11 @@
+/* Theme configuration and custom styling definitions */
+:root {
+  --apple-dark-bg: #1D1D1F;
+  --apple-card-bg: #2C2C2E;
+  --apple-dark-border: #38383A;
+  --apple-accent: #0071E3;
+  --apple-accent-hover: #0077ED;
+  --apple-gray: #86868B;
+  --apple-light-bg: #F5F5F7;
+  --apple-border: #D2D2D7;
+}

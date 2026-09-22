@@ -1,0 +1,8 @@
+{
+  "name": "Ai Business",
+  "description": "We help businesses respond to customers, recover missed calls and book more appointments with AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

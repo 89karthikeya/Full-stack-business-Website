@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "ConsultationRequest": {
+      "title": "Consultation Request",
+      "description": "Information submitted by prospective clients booking a consultation",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the contact person",
+          "maxLength": 100
+        },
+        "businessName": {
+          "type": "string",
+          "description": "Company or business name",
+          "maxLength": 150
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Contact email address",
+          "maxLength": 150
+        },
+        "phone": {
+          "type": "string",
+          "description": "Contact phone number",
+          "maxLength": 50
+        },
+        "automationGoal": {
+          "type": "string",
+          "description": "The primary automation target selected by the user",
+          "maxLength": 100
+        },
+        "currentProcess": {
+          "type": "string",
+          "description": "Description of the current manual or existing workflow",
+          "maxLength": 2000
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the request was submitted"
+        },
+        "status": {
+          "type": "string",
+          "description": "Processing status of the consultation lead",
+          "enum": ["pending", "contacted", "scheduled", "completed"]
+        }
+      },
+      "required": ["name", "businessName", "email", "automationGoal", "createdAt", "status"]
+    }
+  },
+  "firestore": {
+    "/consultations/{consultationId}": {
+      "schema": "ConsultationRequest",
+      "description": "Collection of booked consultation inquiries submitted through the website"
+    }
+  }
+}
