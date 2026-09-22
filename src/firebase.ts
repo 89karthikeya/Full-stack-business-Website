@@ -37,25 +37,56 @@ export async function submitConsultation(data: ConsultationData) {
 
   // After the Firestore save succeeds, trigger secure server-side email notification
   try {
-    const endpoint = typeof window !== 'undefined'
-      ? '/api/send-consultation-notification'
-      : 'http://localhost:3000/api/send-consultation-notification';
+    const payload = {
+      consultationId: docRef.id,
+      name: data.name,
+      businessName: data.businessName,
+      email: data.email,
+      phone: data.phone || '',
+      automationGoal: data.automationGoal,
+      currentProcess: data.currentProcess || ''
+    };
 
-    await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        consultationId: docRef.id,
-        name: data.name,
-        businessName: data.businessName,
-        email: data.email,
-        phone: data.phone || '',
-        automationGoal: data.automationGoal,
-        currentProcess: data.currentProcess || ''
-      })
-    });
+    const backendBase =
+      (typeof import.meta !== 'undefined' && import.meta.env?.VITE_APP_URL) ||
+      (typeof process !== 'undefined' && process.env?.APP_URL) ||
+      '';
+    const isBrowser = typeof window !== 'undefined';
+
+    let dispatched = false;
+
+    // 1. Try same-origin relative API route (supported on dev server & with Firebase Hosting rewrites)
+    try {
+      const endpoint = isBrowser ? '/api/send-consultation-notification' : 'http://localhost:3000/api/send-consultation-notification';
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        const json = await response.json().catch(() => null);
+        if (json && json.success) {
+          dispatched = true;
+        }
+      }
+    } catch {
+      // Ignore initial attempt error and proceed to fallback
+    }
+
+    // 2. If same-origin was not handled (e.g. static Firebase Hosting before rewrite deployment), fallback to Cloud Run backend
+    if (!dispatched && backendBase && isBrowser) {
+      try {
+        const fallbackEndpoint = `${backendBase.replace(/\/+$/, '')}/api/send-consultation-notification`;
+        await fetch(fallbackEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (fallbackError) {
+        console.warn('Fallback notification error:', fallbackError);
+      }
+    }
   } catch (notifyError) {
     console.warn('Server notification dispatch error:', notifyError);
   }
